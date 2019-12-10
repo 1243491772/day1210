@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+      <div id="app">
+          <input type="radio" value="luo" name="star" v-model="name"/>罗西 
+          <input type="radio" value="min" name="star" v-model="name"/>民国
+          <input type="radio" value="huang" name="star" v-model="name"/>黄夏温
+          <img v-if="name=='luo'" style="width:500px;height:500px;"  src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1575976948767&di=d3eca70b465f6123a89719e520d1b231&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20181004%2Fea9dc62de370478397a0adeddd01a11c.jpeg">   
+          <img v-else-if="name=='min'" style="width:500px;height:500px;" src="http://inews.gtimg.com/newsapp_match/0/10613700985/0.jpg">
+          <img v-else-if="name=='huang'" style="width:500px;height:500px;" src="http://b-ssl.duitang.com/uploads/item/201901/14/20190114173102_jLyc5.thumb.400_0.jpeg">
+          <img v-else style="width:500px;height:500px;" src="http://img1.imgtn.bdimg.com/it/u=3273599911,2320297726&fm=26&gp=0.jpg">
+        </div>
+      <script>
+          var app=new Vue({
+            el:"#app",
+            data:{
+                show:'false'  ,
+                name:""       
+        }
+    });
+                
+  </script>
+</body>
+</html>
